@@ -1,0 +1,7 @@
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<http://localhost:8080/rest/people/me> a foaf:Person ;
+dc:title "Pino Navarro, Diego" ;
+foaf:Name "Diego Pino Navarro" ;
+foaf:mbox "dpino@metro.org" .

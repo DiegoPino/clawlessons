@@ -1,0 +1,10 @@
+
+PREFIX ebucore: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+
+DELETE {<> ebucore:filename "" }
+INSERT {<> a foaf:Image; 
+ebucore:filename "diego.jpeg".
+}
+WHERE { }

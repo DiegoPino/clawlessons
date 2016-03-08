@@ -1,0 +1,5 @@
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<> foaf:publications </rest/somedocs/firstdoc>
