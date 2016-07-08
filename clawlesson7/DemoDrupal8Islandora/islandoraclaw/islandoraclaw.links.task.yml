@@ -1,0 +1,17 @@
+# Fedora resource routing definition
+entity.fedora_resource.canonical:
+  route_name: entity.fedora_resource.canonical
+  base_route: entity.fedora_resource.canonical
+  title: 'View'
+
+entity.fedora_resource.edit_form:
+  route_name: entity.fedora_resource.edit_form
+  base_route: entity.fedora_resource.canonical
+  title: Edit
+
+entity.fedora_resource.delete_form:
+  route_name:  entity.fedora_resource.delete_form
+  base_route:  entity.fedora_resource.canonical
+  title: Delete
+  weight: 10
+

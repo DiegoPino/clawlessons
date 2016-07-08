@@ -1,0 +1,24 @@
+islandoraclaw.fedora_resource_type.*:
+  type: config_entity
+  label: 'Fedora resource type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+
+# Plugin \Drupal\islandoraclaw\Plugin\Search\FedoraResourceSearch
+search.plugin.node_search:
+  type: mapping
+  label: 'Fedora Resource search'
+  mapping:
+    rankings:
+      type: sequence
+      label: 'Content ranking'
+      sequence:
+        type: integer
+        label: 'Influence'

@@ -1,0 +1,19 @@
+add fedora resource entities:
+  title: 'Create new Fedora resource entities'
+
+administer fedora resource entities:
+  title: 'Administer Fedora resource entities'
+  description: 'Allow to access the administration form to configure Fedora resource entities.'
+  restrict access: true
+
+delete fedora resource entities:
+  title: 'Delete Fedora resource entities'
+
+edit fedora resource entities:
+  title: 'Edit Fedora resource entities'
+
+view published fedora resource entities:
+  title: 'View published Fedora resource entities'
+
+view unpublished fedora resource entities:
+  title: 'View unpublished Fedora resource entities'
