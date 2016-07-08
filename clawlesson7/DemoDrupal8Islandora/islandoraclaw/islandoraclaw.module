@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains islandoraclaw.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function islandoraclaw_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the islandoraclaw module.
+    case 'help.page.islandoraclaw':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function islandoraclaw_theme() {
+  $theme = [];
+  $theme['fedora_resource'] = [
+    'render element' => 'elements',
+    'file' => 'fedora_resource.page.inc',
+    'template' => 'fedora_resource',
+  ];
+  $theme['fedora_resource_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'fedora_resource.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function islandoraclaw_theme_suggestions_fedora_resource(array $variables) {
+  $suggestions = array();
+  $entity = $variables['elements']['#fedora_resource'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'fedora_resource__' . $sanitized_view_mode;
+  $suggestions[] = 'fedora_resource__' . $entity->bundle();
+  $suggestions[] = 'fedora_resource__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'fedora_resource__' . $entity->id();
+  $suggestions[] = 'fedora_resource__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
