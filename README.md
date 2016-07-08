@@ -1,4 +1,4 @@
-# clawlessons
+# Islandora Claw 2016 Lessons
 Awesome files for Claw Lessons.
 
 ## What is in here?
